@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 </head>
+
 <body>
+
+    <?php
+    if (isset($_GET['msg'])) {
+        echo $_GET['msg'];
+    }
+    ?>
+
     <form action="../controllers/registerAction.php" method="post">
         <h1>Inscrivez-vous</h1>
 
@@ -35,4 +44,5 @@
 
     </form>
 </body>
+
 </html>
