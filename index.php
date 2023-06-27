@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +11,11 @@
 
 <body>
     <?php
-    if (isset($_GET['msg'])) {
-        echo $_GET['msg'];
+    if (isset($_SESSION['id'])) {
+        echo "Bonjour ". $_SESSION['nom'];
+        ?>
+        <a href="controllers/logout.php">Deconnexion</a>
+        <?php
     } else {
     ?>
         <a href="pages/register.php">S'inscrire</a> <br>
